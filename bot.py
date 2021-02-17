@@ -14,7 +14,6 @@ token = os.getenv("BOT_TOKEN")
 # Creating flask app.
 app = Flask(__name__)
 
-print(token)
 # bot client
 bot = slack.WebClient(token=token)
 
