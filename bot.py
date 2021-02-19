@@ -7,8 +7,8 @@ from pathlib import Path
 import requests
 
 # .env file from root
-# env_path = Path('.') / '.env'
-# load_dotenv(dotenv_path=env_path)
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)
 
 # api tokens
 
