@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from flask import Flask
 import os
 from slack import WebClient
@@ -6,12 +6,12 @@ from slackeventsapi import SlackEventAdapter
 from pathlib import Path
 
 # .env file from root
-env_path = Path('.') / '.env'
-load_dotenv(dotenv_path=env_path)
+# env_path = Path('.') / '.env'
+# load_dotenv(dotenv_path=env_path)
 
 # api tokens
-token = os.getenv("BOT_TOKEN")
-sign_in_sec = os.getenv("SIGN_IN_SECRET")
+token = "xoxb-1707767484737-1758973691555-zHWS7uU9XwnBbHUitqFCnluG"
+sign_in_sec = "a4bbe0ad306f55b813ef9096c7fbbdcf"
 
 # Creating flask app.
 app = Flask(__name__)
