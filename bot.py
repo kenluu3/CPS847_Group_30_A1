@@ -46,7 +46,7 @@ def getWeather():
         )
         return Response(), 404
 
-    message="The temperature for " + city + " is " + str(response.get("main").get("temp")) + " degrees Celcius with " + str(response.get("weather")[0].get("description")) + "."
+    message="The temperature for " + city + " is " + str(response.get("main").get("temp")) + " degrees Celsius with " + str(response.get("weather")[0].get("description")) + "."
     client.chat_postMessage(
         channel="#assignment1",
         text=message
