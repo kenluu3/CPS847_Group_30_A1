@@ -1,0 +1,29 @@
+language: python
+matrix:
+  include:
+    - name: "python 3.7 Xenial"
+      dist: xenial
+      python: 3.7
+    - name: "python 3.8 Windows"
+      dist: windows
+      language: shell
+      before_install: choco install python
+      env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
+    - name: "Python 3.7 macOS"
+      os: osx
+      language: shell
+      cache:
+        directories:
+          - "$HOME/Library/Caches/Homebrew"
+          - "$HOME/Library/Caches/pip"
+      addons:
+        homebrew:
+          #update: true
+          packages: python3
+      before_install:
+        - python3 -m pip install --upgrade virtualenv
+        - virtualenv -p python3 --system-site-packages "$HOME/venv"
+        - source "$HOME/venv/bin/activate"
+install: pip install wheel pillow pytest pdfrw pikepdf
+script:
+  - python --version
