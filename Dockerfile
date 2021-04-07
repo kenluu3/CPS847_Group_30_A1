@@ -10,5 +10,7 @@ COPY . .
 # Installs all dependencies of the Flask app.
 RUN pip install -r requirements.txt
 
+EXPOSE 5000
+
 # Executes the web application file. 
 CMD [ "python3", "./web_app.py" ]
