@@ -11,7 +11,6 @@ env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 
 # api tokens
-
 token = os.getenv("BOT_TOKEN")
 sign_in_sec = os.getenv("SIGN_IN_SECRET")
 weather_key=os.getenv("API_KEY")
