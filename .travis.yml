@@ -29,13 +29,13 @@ after_success:
   - docker push magersaber/group30a2
 after_failure: echo "Build failed."
 
-#deploy:
-#  provider: elasticbeanstalk
-#  region: "us-east-2"
-#  app: "A2"
-#  env: "A2-env"
-#  bucket_name: "elasticbeanstalk:us-east-2"
-#  on:
-#    branch: master
-#  access_key_id: $AWS_ACCESS_KEY
-#  secret_access_key: $AWS_SECRET_KEY
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "A2"
+  env: "A2-env"
+  bucket_name: "elasticbeanstalk-us-east-2-813592666721"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
