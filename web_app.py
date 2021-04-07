@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, Response
+from flask import Flask, jsonify, request, Response, render_template
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ items = {
 
 @app.route('/', methods=["GET"])
 def hello_world():
-    return 'Hello, World!'
+    return render_template("index.html")
 
 # URL Format: /add?n1=10&n2=20
 @app.route('/add', methods=["GET"])
