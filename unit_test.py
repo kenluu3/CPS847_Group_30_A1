@@ -3,11 +3,11 @@ import unittest
 
 class TestFlask(unittest.TestCase):
 
-    def test_index(self):
-        test = app.test_client(self)
-        response = test.get("/")
-        status_code = response.status_code
-        self.assertEqual(200, status_code)
+    # def test_index(self):
+    #     test = app.test_client(self)
+    #     response = test.get("/")
+    #     status_code = response.status_code
+    #     self.assertEqual(200, status_code)
     
     def test_getItems(self):
         test = app.test_client(self)
