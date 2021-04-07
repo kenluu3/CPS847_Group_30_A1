@@ -21,9 +21,9 @@ after_failure: echo "Build failed."
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-1"
-  app: "dtest"
-  env: "Dtest-env"
+  region: "us-east-2"
+  app: "A2"
+  env: "A2-env"
   bucket_name: "elasticbeanstalk:us-east-2"
   on:
     branch: master
