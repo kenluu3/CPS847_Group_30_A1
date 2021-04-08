@@ -49,5 +49,26 @@ class TestFlask(unittest.TestCase):
         data = response.status_code
         self.assertEqual(400, data, msg="Expected: 400 Bad Request")
 
+    def test_power(self):
+        test = app.test_client(self)
+        n1 = 2
+        n2 = 4
+        power = 16
+        response = test.get(f"/power?n1={n1}&n2={n2}")
+        data = response.get_data().decode('utf-8') # Need to decode the string, it is returned as b'' (Bytes)
+        self.assertEqual(f"{n1} to the power of {n2} is: {str(power)}.", data, msg=f"Incorrect Power, Expected: {str(power)}")
+
+    def test_getCustomers(self):
+        test = app.test_client(self)
+        response = test.get("/getCustomers")
+        status_code = response.status_code
+        self.assertEqual(200, status_code, msg="Error occurred retrieving resource")
+    
+    def test_getCustomerAge(self):
+        test = app.test_client(self)
+        response = test.get("/getCustomerAge")
+        status_code = response.status_code
+        self.assertEqual(200, status_code, msg="Error occurred retrieving resource")
+
 if __name__ == "__main__":
     unittest.main()
