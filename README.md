@@ -1,4 +1,4 @@
-# CPS847_Group_30_A1
+CPS847 Assignment 2 Group 30
 
 Names: 
 
