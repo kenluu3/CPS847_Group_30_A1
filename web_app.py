@@ -88,7 +88,7 @@ def get_age():
     for c in customers:
         ages.append(customers.get(c))
 
-    return jsonify(ages);
+    return jsonify(ages)
 
 # Run app on debug mode if this is main script.
 if __name__ == "__main__":
